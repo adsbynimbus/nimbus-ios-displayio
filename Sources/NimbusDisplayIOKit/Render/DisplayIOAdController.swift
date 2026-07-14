@@ -133,6 +133,8 @@ final class DisplayIOAdController: AdController {
             dioAd.show(from: adPresentingViewController) { [weak self] event in
                 self?.onDisplayIO(event: event)
             }
+        @unknown default:
+            sendNimbusError(.displayio(reason: .unsupported, stage: .render, detail: "Unsupported adRenderType: \(adRenderType.rawValue)"))
         }
     }
     
