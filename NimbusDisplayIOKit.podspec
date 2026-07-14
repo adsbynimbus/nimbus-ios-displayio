@@ -17,5 +17,5 @@ Pod::Spec.new do |spec|
         :tag => spec.version.to_s
     }
 
-    spec.dependency 'DIOSDK', '~> 4.7'
+    spec.dependency 'DIOSDK/Core', '>= 4.7.5', '< 5.0.0'
 end
