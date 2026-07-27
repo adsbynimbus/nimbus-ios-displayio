@@ -149,8 +149,9 @@ final class DisplayIOAdController: AdController {
         case .onClosed:
             destroy()
         case .onAdCompleted:
+            sendNimbusEvent(.completed)
+            
             if adRenderType == .rewarded {
-                sendNimbusEvent(.completed)
                 sendNimbusEvent(.rewardEarned)
             }
         default:
