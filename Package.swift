@@ -4,7 +4,7 @@ import PackageDescription
 
 var package = Package(
     name: "NimbusDisplayIOKit",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
            name: "NimbusDisplayIOKit",
